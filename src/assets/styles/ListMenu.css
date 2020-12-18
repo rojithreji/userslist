@@ -1,0 +1,421 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+body{
+    margin: 0px;
+}
+.Table{
+    border-collapse: collapse;
+    width: 90%;
+    position: relative;
+    margin: auto;
+    height: 90%;
+    margin-top: 3%;
+    opacity: 300%;
+    border-radius: 10px;
+    background-color: rgb(2, 63, 63);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+} 
+.listHeader{
+    width: calc(100%-20px);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 10px 0px 0px;
+}
+.listHeader-right{
+    width: 100px;
+}
+.listHeader input[type=text] {
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    padding: 10px 8px;
+    width: 90%;
+    transition: .3s;
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.listHeader input[type=text]:focus {
+    border-bottom: 3px solid rgb(49, 49, 49);
+  }  
+
+.listTable{
+    height: 500px;
+    overflow-y: scroll;
+}  
+.listTable table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 0px 0px 10px 10px;
+}
+
+table th{
+    position: sticky;
+    top: 0;
+    
+}
+
+.listTable td{
+    color: rgb(185, 185, 185);
+    /* opacity: 70%; */
+    padding: 20px 10px;
+    text-align: center;
+    border: 1px solid rgb(2, 63, 63);
+    border-radius: 0px 0px 10px 10px;
+   
+}
+.listTableData{
+    height: 100px;
+}
+.listTable th{
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    text-align: center;
+    border:0px;
+    border-collapse: collapse;
+    position: sticky;
+}
+.fontAwesome {
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.listTable button{
+    border: none;
+    padding: 7px 10px;
+    color: white;
+    border-radius: 3px;
+}
+.listGreen{
+    background-color: #4CAF50;
+}
+.listRed{
+    background-color: red;
+}
+.savingsRed{
+    color: red;
+}
+.noItem{
+    z-index: 5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+    font-family: arial;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
+}
+.fontAwesome::placeholder{
+    font-size: 10px;
+}
+
+@media (max-width :800px){
+
+    .listTable{
+        height: 450px;
+        overflow-y: scroll;
+    }  
+    .listHeading{
+        text-align: center;
+        padding: 20px;
+        font-size: 15px;
+        height:20px;
+        background-color:rgb(5, 82, 82);
+        color: white;
+        border-radius: 15px 15px 0px 0px;
+    }
+    
+    
+    td:nth-child(2){
+        padding: 10px;
+        text-align: center;
+    }
+    td:nth-child(3){
+        display:none;
+    }
+    td:nth-child(4){
+        display: none;
+    }
+    td:nth-child(5){
+        display: none;
+    }
+    td:nth-child(6){
+        display: none;
+    }
+    td:nth-child(7){
+        display: none;
+    }
+    th:nth-child(3){
+        display: none;
+    }
+    th:nth-child(4){
+        display: none;
+    }
+    th:nth-child(5){
+        display: none;
+    }
+    th:nth-child(6){
+        display: none;
+    }
+    th:nth-child(7){
+        display: none;
+    }
+    /* td {
+        border-collapse: collapse;
+        padding: 5px;
+        text-align: right;
+      } 
+    
+    
+    .table{
+        width:0px;
+        height: 490px;
+        z-index:2;
+    }
+     #edit{
+         margin-left: 20px;
+     }  */
+}
+   
+
+
+
+
+
+
+
+
+
+/* .listTableHeading{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around ;
+    background-color: salmon;
+    flex:1;
+}
+
+.listTableData{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+/* }
+.tableBody{
+    background-color: seagreen;
+    height: calc(90%-150px);
+    width:100%;
+    overflow-y: scroll;
+} */ 
+
+/* td, th { 
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        text-align: left; 
+        font-size: 18px;
+        } */
+
+/* 
+.listmenu{
+
+    background-color: white;
+    height: 590px;
+    border-radius: 15px;
+    overflow: scroll;
+} */
+
+
+/* .listHeading{
+    text-align: left;
+    padding: 20px;
+    font-size: 25px;
+    height:40px;
+    background-color:rgb(5, 82, 82);
+    color: white;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+/* .search{
+    border-radius: 75px;
+    max-width: 150px;
+    background-color: teal;
+    color: #f5f5f5;
+} */
+.Table::placeholder {
+    color: rgb(255, 255, 255);
+    text-align:left;
+}
+  /* }
+.searchdiv input[type=text] {
+    border: none;
+    border-bottom: 2px solid teal;
+    outline: none;
+    padding: 10px 8px;
+    width: 200px;
+    transition: .3s;
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+} */
+
+/* .searchdiv input[type=text]:focus {
+    border: 1px solid rgb(255, 255, 255);
+    transform: scale(1.05); */
+  /* }   */
+
+  
+/* .listTable{
+    width:750px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 380px;
+    overflow-y: scroll;
+} */
+
+/* .table{
+    width:740px;
+    height: 490px;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index:2;
+} */
+
+/* #edit button a{
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 30px;
+    height: 20px;
+    background-color: #4CAF50;
+    margin-top: 10px;
+    width: 30px;
+    
+  }
+
+#delete button{
+    
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background-color: #d61414;
+    vertical-align: center;
+}   */
+
+
+/* tr:hover {background-color: #f5f5f5;}
+.noItem{
+    display: flex;
+    margin-top: 100px;
+    color: red;
+    margin-left: 30%;
+    border-radius: 30px;
+    box-shadow: silver;
+} */
+
+/* @media (max-width :600px){
+    table{
+        border-collapse: collapse;
+        border-bottom:none;
+    }  
+    
+    .listmenu{
+        width:500px;
+        background-color: white;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .listHeading{
+        text-align: center;
+        padding: 20px;
+        font-size: 15px;
+        height:20px;
+        background-color:rgb(5, 82, 82);
+        color: white;
+        border-radius: 15px 15px 0px 0px;
+    }
+    
+    .listTable{
+        width:100%;
+        margin-left: 0px;
+        margin-top: 20px;
+        height: 700px;
+        overflow-x: scroll;
+        overflow-y: none;
+        font-size: 12px;
+        
+ }
+    
+    
+    td:nth-child(2){
+        padding: 10px;
+        text-align: center;
+    }
+    td:nth-child(3){
+        display:none;
+    }
+    td:nth-child(4){
+        display: none;
+    }
+    td:nth-child(5){
+        display: none;
+    }
+    td:nth-child(6){
+        display: none;
+    }
+    td:nth-child(7){
+        display: none;
+    }
+    th:nth-child(3){
+        display: none;
+    }
+    th:nth-child(4){
+        display: none;
+    }
+    th:nth-child(5){
+        display: none;
+    }
+    th:nth-child(6){
+        display: none;
+    }
+    th:nth-child(7){
+        display: none;
+    }
+    td {
+        border-collapse: collapse;
+        padding: 5px;
+        text-align: right;
+      } 
+    
+    
+    .table{
+        width:0px;
+        height: 490px;
+        z-index:2;
+    }
+     #edit{
+         margin-left: 20px;
+     } 
+}
+    */

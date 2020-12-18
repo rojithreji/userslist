@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './state/store'
 
+
+const unsubscribe = store.subscribe(()=>{console.log("subscribe",store.getState())})
+
+
+store.subscribe(()=>{console.log("subscribe",store.getState())})
+unsubscribe()
+
+
+console.log("store", store.getState())
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <React.StrictMode> 
+          <App />
+    </React.StrictMode></Provider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

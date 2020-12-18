@@ -1,0 +1,210 @@
+.create{
+    width: 100%;
+    height: 0px;
+    background-color: rgb(5, 82, 82);
+    vertical-align: center;
+    position: fixed;
+    z-index: 2;
+    /* align-content: center; */
+}
+
+.createContent{
+    width:300px;
+    height: 420px;
+    background-color: teal;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 8px 4px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 20px;
+    margin-top:50px;
+    
+}
+
+
+.p{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    margin-top: 30px;
+}
+
+
+
+.create-fields{
+    margin-left: auto;
+    color: white;
+    padding: 10px;
+}
+
+.create-fields input[type=text] {
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    outline: none;
+    padding: 10px 8px;
+    width: 200px;
+    transition: .3s;
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 33px;
+    background-color: teal;
+    color: white;
+}
+.create-fields ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
+
+  .createContent input[type=text]:focus {
+    border-bottom: 3px solid rgb(49, 49, 49);
+  }  
+
+  .createContent input[type=number] {
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding: 10px 8px;
+    width: 200px;
+    transition: .3s;
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 33px;
+    background-color: teal;
+    color: white;
+}
+
+.createContent input[type=number]:focus {
+    border-bottom: 3px solid rgb(49, 49, 49);
+  }  
+
+
+.buttons{
+
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    margin-left: 105px;
+    margin-right: auto;
+    /* margin-top: 15px; */
+    margin-top:30px;
+  }
+
+
+.select  select{
+    outline: none;
+    text-decoration: underline;
+    padding: 5px;
+    width:150px;
+    margin-left: 70px;
+    margin-top: 20px;
+    background-color: teal;
+    color: white;
+    border: 1px white;
+    border-bottom: 2px solid  white
+
+}
+
+
+.createContent input[type="radio"] {
+    display: inline-block;
+    margin: -5px 12px 0 0;
+    visibility: hidden;
+}
+.radio_label{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    /*  padding-left: 25px;*/
+    margin-right: 15px;
+}
+.radio_label::before {
+    content: "";
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    /*   bottom: 4px;*/
+    border:1px solid rgb(255, 255, 255);
+    /*background-color: #aaa;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);*/
+    border-radius:100%;
+}
+
+.createContent input[type="radio"]:checked + span:before {
+    content: "";
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 1px;
+    top:1px;
+    border-radius:50%;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+.radio2{
+    margin-left: 119px;
+    margin-top: 10px;
+}
+
+.gender{
+    margin-left: 33px;
+}
+
+.createContent input[type=checkbox] + label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+   
+  }
+  
+  .createContent input[type=checkbox] {
+    display: none;
+  }
+  
+  .createContent input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 0.1em solid rgb(255, 255, 255);
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    color: transparent;
+    transition: .2s;
+  }
+  
+  .createContent input[type=checkbox] + label:active:before {
+    transform: scale(0);
+  }
+  
+  .createContent input[type=checkbox]:checked + label:before {
+    background-color: MediumSeaGreen;
+    border-color: MediumSeaGreen;
+    color: #fff;
+  }
+
+  .createContent input[type=number]{
+    color: white;
+  }
