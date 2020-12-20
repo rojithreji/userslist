@@ -102,7 +102,7 @@
 
 .select  select{
     outline: none;
-    text-decoration: underline;
+    text-decoration: none;
     padding: 5px;
     width:150px;
     margin-left: 70px;
@@ -169,7 +169,23 @@
     margin-left: 33px;
 }
 
-.createContent input[type=checkbox] + label {
+.checkbox{
+  outline: none;
+  text-decoration: none;
+  padding: 3px;
+  width:150px;
+  margin-left: 35px;
+  margin-top: 10px;
+  background-color: teal;
+  color: white;
+  border: 1px white;
+  font-size:13px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.checkbox input[type=checkbox] + label {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -177,11 +193,11 @@
    
   }
   
-  .createContent input[type=checkbox] {
+  .checkbox input[type=checkbox] {
     display: none;
   }
   
-  .createContent input[type=checkbox] + label:before {
+  .checkbox input[type=checkbox] + label:before {
     content: "\2714";
     border: 0.1em solid rgb(255, 255, 255);
     border-radius: 0.2em;
@@ -195,11 +211,11 @@
     transition: .2s;
   }
   
-  .createContent input[type=checkbox] + label:active:before {
+  .checkbox input[type=checkbox] + label:active:before {
     transform: scale(0);
   }
   
-  .createContent input[type=checkbox]:checked + label:before {
+  .checkbox input[type=checkbox]:checked + label:before {
     background-color: MediumSeaGreen;
     border-color: MediumSeaGreen;
     color: #fff;
@@ -207,4 +223,32 @@
 
   .createContent input[type=number]{
     color: white;
+  }
+
+  .edit-buttons{
+    margin: auto;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.edit-buttons button{
+
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    margin-left: 10px;
+    /* margin-top: 15px; */
+    /* margin-bottom: 10px; */
+    
   }

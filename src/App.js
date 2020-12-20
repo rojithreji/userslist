@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {BrowserRouter as Router, Switch, Route, useHistory, Redirect} from 'react-router-dom'
 import CreateMenu from './components/postlogin/CreateMenu';
 import ListMenu from './components/postlogin/ListMenu'
-import EditPerson from './components/postlogin/EditPerson'
 import Login from './components/prelogin/Login'
 import HomePageHeader from './components/postlogin/HomePageHeader';
 import ChangePassword from './components/postlogin/ChangePassword';

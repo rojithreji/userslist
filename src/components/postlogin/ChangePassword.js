@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link,useHistory} from 'react-router-dom';
 import '../../assets/styles/ChangePassword.css'
 import Popup from '../../components/common/Popup'
@@ -36,7 +36,7 @@ const ChangePassword = () => {
         }
         setNewPassword('')
     }
-
+  
 
     const [length,setLength] = useState(false)
     const [alphacaps,setAlphaCaps] = useState(false)
@@ -46,6 +46,7 @@ const ChangePassword = () => {
     const [strength,setStrength] = useState("blank")
     const [strengthScore,setStrengthScore] = useState(0)
     
+    
    
     const passwordStrengthHandler = ()=>{
         setStrength(false)
@@ -54,26 +55,26 @@ const ChangePassword = () => {
       
         for(let i=0;i<newPassword.length;i++){
             
-                let char = newPassword.charCodeAt(i)
-                if(!alphacaps && char >=65 && char <=90){
-                    setAlphaCaps(true);
-                    setStrengthScore(strengthScore+1)}
-                
-                if(!alphasmall && char >=97 && char <=122){
-                    setAlphaSmall(true);
-                    setStrengthScore(strengthScore+1)
-                }
-                if(!numeric && char >=48 && char <=57){
-                    setNumeric(true);
-                    setStrengthScore(strengthScore+1)
-                }
-                if(!spchar && (char >=33 && char <=47 || char >= 58 && char <= 64)){
-                    setSpchar(true);
-                    setStrengthScore(strengthScore+1)
-                }
-                
+            let char = newPassword.charCodeAt(i)
+            if(!alphacaps && char >=65 && char <=90){
+                setAlphaCaps(true);
+                setStrengthScore(strengthScore+1)}
+            
+            if(!alphasmall && char >=97 && char <=122){
+                setAlphaSmall(true);
+                setStrengthScore(strengthScore+1)
             }
-            // if(length==false){setStrength('weak')}
+            if(!numeric && char >=48 && char <=57){
+                setNumeric(true);
+                setStrengthScore(strengthScore+1)
+            }
+            if(!spchar && (char >=33 && char <=47 || char >= 58 && char <= 64)){
+                setSpchar(true);
+                setStrengthScore(strengthScore+1)
+            }
+            
+        }
+            
             if(strengthScore==1){setStrength('Poor')}
             if(strengthScore==2){setStrength('Medium')}
             if(strengthScore==3){setStrength('Good')}

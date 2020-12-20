@@ -18,7 +18,6 @@ function Login({login}) {
     const password = window.localStorage.getItem('password')
     const [error, setError] = useState(false)   
     let history = useHistory()
-    //Toggle Error
 
     const [isOpen, setIsOpen] = useState(false);
  

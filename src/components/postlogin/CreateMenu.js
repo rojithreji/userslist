@@ -4,7 +4,6 @@ import '../../assets/styles/CreateMenu.css'
 import {connect} from 'react-redux';
 import Popup from '../common/Popup'
 import * as constants from '../../utilities/Constants'
-import {clearTextField,clearRadio} from '../../utilities/CommonMethods'
 import {addPerson,updatePerson} from '../../state/Actions'
 
 
