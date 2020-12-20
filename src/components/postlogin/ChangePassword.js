@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import {Link,useHistory} from 'react-router-dom';
+import React, { useState } from 'react'
+import {useHistory} from 'react-router-dom';
 import '../../assets/styles/ChangePassword.css'
 import Popup from '../../components/common/Popup'
 
@@ -12,12 +12,12 @@ const ChangePassword = () => {
     const [success,setSuccess]= useState(false)
     const history = useHistory()
     const passwordUpdateHandler = ()=>{
-        if(newPassword==""||currentPassword==""||confirmPassword==""){
+        if(newPassword===""||currentPassword===""||confirmPassword===""){
             setError(...error,"Password cannot be blank !!")
             setStrength("blank")
         }
-        else if(newPassword==confirmPassword){
-            if(currentPassword==password){
+        else if(newPassword===confirmPassword){
+            if(currentPassword===password){
                 setSuccess(true)
                 window.localStorage.setItem('password',newPassword);
                 
@@ -68,17 +68,17 @@ const ChangePassword = () => {
                 setNumeric(true);
                 setStrengthScore(strengthScore+1)
             }
-            if(!spchar && (char >=33 && char <=47 || char >= 58 && char <= 64)){
+            if(!spchar && ((char >=33 && char <=47) || (char >= 58 && char <= 64))){
                 setSpchar(true);
                 setStrengthScore(strengthScore+1)
             }
             
         }
             
-            if(strengthScore==1){setStrength('Poor')}
-            if(strengthScore==2){setStrength('Medium')}
-            if(strengthScore==3){setStrength('Good')}
-            if(length && strengthScore==4){setStrength('Strong')}
+            if(strengthScore===1){setStrength('Poor')}
+            if(strengthScore===2){setStrength('Medium')}
+            if(strengthScore===3){setStrength('Good')}
+            if(length && strengthScore===4){setStrength('Strong')}
                  
     }
     
@@ -121,7 +121,7 @@ const ChangePassword = () => {
                     <div className='updatePassword-fields'>
                         <input type='password' placeholder='Current Password' required id='name' value={currentPassword} onChange={(e)=>setCurrentPassword(e.target.value)}></input>
                         <input type='password' placeholder='New Password' required id='name' value={newPassword} onChange={(e)=>setNewPassword(e.target.value)} onKeyUp={passwordStrengthHandler}></input>
-                            <div className={strength}>{(strength=='blank')?(""):(strength)}</div>
+                            <div className={strength}>{(strength==='blank')?(""):(strength)}</div>
                         <input type='password' placeholder='Confirm Password' required id='name' value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}></input>
                     </div>
                     <br/>

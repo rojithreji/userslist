@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {BrowserRouter as Router, Switch, Route, useHistory, Redirect} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import CreateMenu from './components/postlogin/CreateMenu';
 import ListMenu from './components/postlogin/ListMenu'
 import Login from './components/prelogin/Login'
@@ -9,7 +9,6 @@ import HomePageMenu from './components/postlogin/HomePageMenu';
 import Product from './components/postlogin/Product'
 
 const App=()=> {
-    const history = useHistory()
     const [user,setUser]= useState("")
     const [loggedIn,setLoggedIn] = useState(false)
     const login=(name)=>{
